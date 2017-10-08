@@ -1,0 +1,94 @@
+body{
+  background-color: #eee;
+  font-family: 'Quicksand', sans-serif !important;
+  font-size: 14px;
+}
+.icon_sign i,.icon_process i{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #2c3e50;
+  color: #fff;
+  font-size: 18px;
+  margin-top:20px;
+  cursor: pointer;
+  transition:0.3s ease-in;
+}
+/*.icon_sign i:hover{
+  color: #2ecc71;
+}*/
+.icon_sign::before{
+  content: "";
+  position: absolute;
+  left: 40%;
+  width: 2px;
+  height: 78vh;
+  background-color: #34495e;
+  z-index: -1;
+}
+.icon_sign .active, .icon_sign i:hover{
+  background-color: #2ecc71 !important;
+  box-shadow: 0px 0px 50px #2ecc71;
+  color: #fff;
+}
+.icon_sign .active::after{
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 10px;
+  background-color: #2ecc71;
+  margin-top: 20px;
+  z-index: -1;
+}
+.numb_fields div{
+  margin-bottom: 10px;
+}
+.dropdown-menu{
+  background-color: #27ae60;
+  color: #fff;
+}
+.dropdown-menu a{
+  color: #fff;
+}
+.dropdown-menu a:hover, .dropdown-menu a:focus{
+  background-color: #2ecc71;
+  color: #fff;
+}
+.icon_process i{
+  cursor: default;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.icon_process::before{
+  content: "";
+  width: 200%;
+  height: 2px;
+  position: absolute;
+  top:25px;
+  background-color: #34495e;
+  z-index: -1;
+  margin-left: -50px;
+}
+.animate_r{
+  animation-iteration-count: infinite;
+}
+.icon_sign i{
+  position: relative;
+}
+.icon_sign i .badge{
+  position: absolute;
+  top:0px;
+}
+textarea{
+  border-radius: 2px !important;
+  height: 30vh;
+  border:0px solid transparent !important;
+  color: rgba(46, 204, 113,1.0) !important;
+}
+textarea:focus{
+  outline: none;
+}
