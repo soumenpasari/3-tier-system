@@ -3,10 +3,10 @@
   <head>
     <title>Final Year Project</title>
     <?php
-      include("/res/links/fav.php");
-      require_once("/res/cdn/bootstrap_cdn.php");
-      require_once("/res/links/css_links.php");
-      require_once("/res/links/fonts.php");
+      include("res/links/fav.php");
+      require_once("res/cdn/bootstrap_cdn.php");
+      require_once("res/links/css_links.php");
+      require_once("res/links/fonts.php");
     ?>
   </head>
   <body>
@@ -137,7 +137,7 @@
     <!-- web app content ends here -->
     <!-- links of js in the bootom of page content -->
     <?php
-      require_once("/res/links/js_links.php");
+      require_once("res/links/js_links.php");
      ?>
   </body>
   <?php
