@@ -4,5 +4,3 @@ It's a college final year project on 3-tier architecture. The project is to anal
 Till now only the front-end is ready. No backend is ready to deploy.
 
 Server side script for simple calculations is developed only.
-
-There is some other things that I care for
