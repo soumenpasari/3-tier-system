@@ -23,7 +23,7 @@
       <li class="breadcrumb-item active"><i class="fa fa-database" aria-hidden="true"></i> Big Data acess</li>
     </ol>
     <!-- main content -->
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-1 icon_sign">
           <a href="index.php"><i class="fa fa-server" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Main server"></i></a>
@@ -32,7 +32,7 @@
           <a href="documentation.php"><i class="fa fa-file-text-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Documentation"></i></a>
         </div>
         <!-- card display div -->
-        <div class="col-12 col-sm-12 col-md-5">
+        <div class="col-12 col-sm-12 col-md-4">
           <div class="card card_hover">
             <div class="card-header">
               <i class="fa fa-circle" aria-hidden="true"></i> Hadoop Big Data Access
@@ -83,7 +83,7 @@
                 <!-- button for submit -->
                 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                   <button type="submit" class="btn btn-default" name="btn_submit">Submit</button>
-                  <button type="Reset" class="btn btn-danger" name="btn_submit">Reset</button>
+                  <button type="Reset" class="btn btn-flat text-danger" name="btn_submit">Reset</button>
                 </div>
               </form>
             </div>

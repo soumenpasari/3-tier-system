@@ -36,7 +36,7 @@
       <li class="breadcrumb-item<?php if(!$btn_submit){echo " active";}?>"><?php if($btn_submit){echo "<a href='index.php'>";} ?><i class="fa fa-server" aria-hidden="true"></i> Server<?php if($btn_submit){echo "</a>";} ?></li>
       <li class="breadcrumb-item <?php if($btn_submit){echo "active visible animated fadeInDown";} else{echo "invisible";} ?>"><i class="fa fa-bullhorn" aria-hidden="true"></i> Output</li>
     </ol>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-1 icon_sign">
           <i class="fa fa-server active" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Main server"></i>
@@ -45,7 +45,7 @@
           <a href="documentation.php"><i class="fa fa-file-text-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Documentation"></i></a>
         </div>
         <!-- card display div -->
-        <div class="col-12 col-sm-12 col-md-5">
+        <div class="col-12 col-sm-12 col-md-4">
           <div class="card card_hover">
             <div class="card-header">
               <i class="fa fa-circle" aria-hidden="true"></i> Server application
@@ -74,7 +74,7 @@
             </div>
           </div>
         </div>
-        <div class="animated fadeInLeft text-center col-12 col-sm-12 col-md-1 icon_process <?php if($btn_submit){echo "visible";} else{echo "invisible";} ?>">
+        <div class="animated fadeIn text-center col-12 col-sm-12 col-md-1 icon_process <?php if($btn_submit){echo "visible";} else{echo "invisible";} ?>">
           <i class="fa fa-<?php if($number_array == "" or $function_name == null){echo "exclamation";} else{echo 'long-arrow-right';} ?> <?php if($btn_submit){echo "animated slideInLeft animate_r";}?>"></i>
         </div>
         <!-- result display div -->
