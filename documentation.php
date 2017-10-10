@@ -23,7 +23,7 @@
       <li class="breadcrumb-item active"><i class="fa fa-file-text-o" aria-hidden="true"></i> Documentation</li>
     </ol>
     <!-- main content -->
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-1 icon_sign">
           <a href="index.php"><i class="fa fa-server" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Main server"></i></a>
