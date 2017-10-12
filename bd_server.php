@@ -11,11 +11,16 @@
   </head>
   <body>
     <!-- web app content starts here -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="index.php">
         <img src="./res/img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        3 TIER SYSTEM
+        3-T-S
       </a>
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a href="index.php" class="nav-link">App</a></li>
+        <li class="nav-item"><a href="documentation.php" class="nav-link">Documentation</a></li>
+        <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+      </ul>
     </nav>
     <!-- breadcrumb -->
     <ol class="breadcrumb">
@@ -29,7 +34,6 @@
           <a href="index.php"><i class="fa fa-server" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Main server"></i></a>
           <i class="fa fa-database active" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Big Data server"></i>
           <a href="bd_secondary_server.php"><i class="fa fa-database" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Secondary Big Data server"><span class="badge badge-success"><span class="fa fa-folder"></span></span></i></a>
-          <a href="documentation.php"><i class="fa fa-file-text-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Documentation"></i></a>
         </div>
         <!-- card display div -->
         <div class="col-12 col-sm-12 col-md-4">

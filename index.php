@@ -24,11 +24,16 @@
      ?>
     <!-- php codes ends -->
     <!-- web app content starts here -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="index.php">
         <img src="./res/img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        3 TIER SYSTEM
+        3-T-S
       </a>
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a href="index.php" class="nav-link">App</a></li>
+        <li class="nav-item"><a href="documentation.php" class="nav-link">Documentation</a></li>
+        <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+      </ul>
     </nav>
     <!-- breadcrumb -->
     <ol class="breadcrumb">
@@ -42,7 +47,6 @@
           <i class="fa fa-server active" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Main server"></i>
           <a href="bd_server.php"><i class="fa fa-database" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Hadoop Big Data server"></i></a>
           <a href="bd_secondary_server.php"><i class="fa fa-database" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Secondary Big Data server"><span class="badge badge-success"><span class="fa fa-folder"></span></span></i></a>
-          <a href="documentation.php"><i class="fa fa-file-text-o" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Documentation"></i></a>
         </div>
         <!-- card display div -->
         <div class="col-12 col-sm-12 col-md-4">
@@ -119,12 +123,11 @@
                       echo "<hr>";
                       //display the results with operations name
                       echo "<div class='text-info'>Operation choosen is : <span class='badge badge-info'>$function_name<span></div>";
-                      echo "<div class='row'><div class='col-4 text-info'>Entered numbers:</div><div class='col-8'>";
+                      echo "<div class='text-info'>Entered numbers: </div>";
                       foreach ($unpro_arr as $num_key => $num_value) {
                         $delay = $num_key/6;
                         echo "<span class='badge badge-dark animated flipInY' style='animation-delay : ".$delay."s;'>".$num_value."</span> ";
                       }
-                      echo "</div></div>";
                     }
                   }
                  ?>

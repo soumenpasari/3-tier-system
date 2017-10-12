@@ -11,56 +11,76 @@
   </head>
   <body>
     <!-- web app content starts here -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <a class="navbar-brand" href="index.php">
         <img src="./res/img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        3 TIER SYSTEM
+        3-T-S
       </a>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.php" class="nav-link">App</a></li>
+        <li class="nav-item active"><a href="documentation.php" class="nav-link">Documentation</a></li>
+        <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+      </ul>
     </nav>
-    <!-- breadcrumb -->
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-      <li class="breadcrumb-item active"><i class="fa fa-file-text-o" aria-hidden="true"></i> Documentation</li>
-    </ol>
+
+    <div class="jumbotron text-light">
+      <div class="container">
+        <h1>Documentation</h1>
+        <small>Project based on <b>three tier architecture</b> system</small>
+      </div>
+    </div>
     <!-- main content -->
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-12 col-md-1 icon_sign">
-          <a href="index.php"><i class="fa fa-server" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Main server"></i></a>
-          <a href="bd_server.php"><i class="fa fa-database" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Big Data server"></i></a>
-          <a href="bd_secondary_server.php"><i class="fa fa-database" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Secondary Big Data server"><span class="badge badge-success"><span class="fa fa-folder"></span></span></i></a>
-          <i class="fa fa-file-text-o active" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Documentation"></i>
-        </div>
         <!-- card display div -->
-        <div class="col-12 col-sm-12 col-md-11">
+        <div class="col-12 col-sm-12 col-md-9">
           <div class="card">
             <div class="card-header">
-              <i class="fa fa-circle" aria-hidden="true"></i> Documentation
+              <i class="fa fa-circle" aria-hidden="true"></i> README.md
             </div>
             <div class="card-body">
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-3">
-                  <form method="get">
-                    <div class="row numb_fields">
-                      <div class="col"><input class="form-control" type="text" placeholder="Search" name="number_array"/></div>
-                    </div>
-                    <ul>
-                      <li><a href="#">Introduction</a></li>
-                      <li><a href="#">Aim and motive</a></li>
-                      <li><a href="#">Acknowledgement</a></li>
-                      <li><a href="#">Credits</a></li>
-                    </ul>
-                  </form>
-                </div>
-                <div class="col-12 col-sm-12 col-md-9">
-                  <h1 class="text-success">Introduction</h1><hr>
-                </div>
-              </div>
+              <pre><?php
+                $myfile = fopen("README.md", "r") or die("Unable to open file!");
+                echo fread($myfile,filesize("README.md"));
+                fclose($myfile);
+               ?></pre>
+            </div>
+          </div>
+          <!-- license card -->
+          <div class="card my-3">
+            <div class="card-header">
+              <i class="fa fa-balance-scale" aria-hidden="true"></i> LICENSE
+            </div>
+            <div class="card-body">
+              <pre><?php
+                $myfile = fopen("LICENSE", "r") or die("Unable to open file!");
+                echo fread($myfile,filesize("LICENSE"));
+                fclose($myfile);
+               ?></pre>
             </div>
           </div>
         </div>
+
+        <!-- documentation heading list -->
+        <div class="col-12 col-sm-12 col-md-3">
+          <form method="get">
+            <div class="row numb_fields">
+              <div class="col"><input class="form-control" type="text" placeholder="Search" name="number_array"/></div>
+            </div>
+            <ul class="heading-list-nav text-success">
+              <li><a href="#">Introduction</a></li>
+              <li><a href="#">Aim and motive</a></li>
+              <li><a href="#">README.md</a></li>
+              <li><a href="#"><i class="fa fa-balance-scale"></i> Licence</a></li>
+            </ul>
+          </form>
+        </div>
       </div>
     </div>
+    <!-- footer -->
+    <?php
+      include("footer.php");
+     ?>
 
     <!-- links of js in the bootom of page content -->
     <?php
